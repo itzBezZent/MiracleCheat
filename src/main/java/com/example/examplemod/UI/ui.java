@@ -38,7 +38,7 @@ public class ui {
 
                 ScaledResolution sr = new ScaledResolution(mc);
 
-                fr.drawString("Miracle§aClient §fB§a1.0", 5, 5, -1);
+                fr.drawString("Miracle§aClient §fB§a0.0.1", 5, 5, -1);
 
                 for (Module module : Client.modules) {
 
