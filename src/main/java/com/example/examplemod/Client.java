@@ -1,5 +1,7 @@
+//пон
 package com.example.examplemod;
 
+import com.example.examplemod.Module.COMBAT.TriggerBot;
 import com.example.examplemod.Module.MOVEMENT.Fly;
 
 import com.example.examplemod.Module.MOVEMENT.Sprint;
@@ -25,6 +27,8 @@ public class Client {
         Display.setTitle(name);
 
         modules.add(new BlockReach());
+
+        modules.add(new TriggerBot());
 
         modules.add(new Sprint());
 
