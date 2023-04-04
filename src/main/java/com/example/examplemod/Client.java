@@ -1,13 +1,10 @@
 package com.example.examplemod;
-
 import com.example.examplemod.Module.COMBAT.TriggerBot;
 import com.example.examplemod.Module.MOVEMENT.Fly;
-
 import com.example.examplemod.Module.MOVEMENT.Sprint;
-
 import com.example.examplemod.Module.Module;
-
 import com.example.examplemod.Module.PLAYER.BlockReach;
+import com.example.examplemod.Module.RENDER.GlowESP;
 import me.bushroot.clickgui.ClickGuiScreen;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.opengl.Display;
@@ -28,6 +25,8 @@ public class Client {
         modules.add(new BlockReach());
 
         modules.add(new TriggerBot());
+
+        modules.add(new GlowESP());
 
         modules.add(new Sprint());
 
