@@ -39,6 +39,7 @@ public class ui {
                 ScaledResolution sr = new ScaledResolution(mc);
 
                 fr.drawString("Miracle§aClient §fB§a0.0.1", 5, 5, -1);
+                fr.drawString("§fFPS: §a" + Minecraft.getDebugFPS(), 5, 15, -1);
 
                 for (Module module : Client.modules) {
 
