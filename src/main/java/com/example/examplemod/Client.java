@@ -8,6 +8,7 @@ import com.example.examplemod.Module.RENDER.GlowESP;
 import me.bushroot.clickgui.ClickGuiScreen;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.opengl.Display;
+import sun.font.FontUtilities;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -33,6 +34,7 @@ public class Client {
         modules.add(new Fly());
 
         clickGui = new ClickGuiScreen();
+
 
     }
 
