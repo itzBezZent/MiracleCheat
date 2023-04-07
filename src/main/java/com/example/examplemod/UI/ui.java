@@ -1,6 +1,7 @@
 package com.example.examplemod.UI;
 import com.example.examplemod.Client;
 import com.example.examplemod.Module.Module;
+import font.FontUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.Gui;
@@ -9,6 +10,7 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import java.awt.*;
+import java.util.Objects;
 
 import static net.minecraft.client.gui.Gui.drawRect;
 public class ui {
@@ -24,6 +26,14 @@ public class ui {
 
                 drawRect(5,5,200,14, new Color(0x151515).hashCode());
                 drawRect(5,5,200,4, rainbow(300));
+
+                try {
+                    FontUtils.normal.drawString(Client.cName + "§f | " + mc.getSession().getUsername() + " | " + Objects.requireNonNull(mc.getCurrentServerData()).serverIP +
+                                    " | FPS: §a" + Minecraft.getDebugFPS() + "§f | Ping: §a" + mc.getCurrentServerData().pingToServer,
+                            10, 10, -1);
+                } catch (Exception ex) {
+                    FontUtils.normal.drawString(Client.cName + "§f | " + mc.getSession().getUsername() + " | FPS: §a" + Minecraft.getDebugFPS(), 10, 10, -1);
+                }
 
                 /*
                 fr.drawString("Miracle§aClient §fB§a0.0.1", 5, 5, -1);

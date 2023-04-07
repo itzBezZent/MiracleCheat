@@ -5,6 +5,7 @@ import com.example.examplemod.Module.MOVEMENT.Sprint;
 import com.example.examplemod.Module.Module;
 import com.example.examplemod.Module.PLAYER.BlockReach;
 import com.example.examplemod.Module.RENDER.GlowESP;
+import font.FontUtils;
 import me.bushroot.clickgui.ClickGuiScreen;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.opengl.Display;
@@ -15,6 +16,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class Client {
 
     public static String name = "MiracleClient 1.12.2";
+
+    public static String cName = "Miracle§aClient §fB§a0.0.1";
 
     public static CopyOnWriteArrayList<Module> modules = new CopyOnWriteArrayList<Module>();
     public static ClickGuiScreen clickGui;
@@ -34,6 +37,8 @@ public class Client {
         modules.add(new Fly());
 
         clickGui = new ClickGuiScreen();
+
+        FontUtils.bootstrap();
 
 
     }
