@@ -1,10 +1,12 @@
 package com.example.examplemod;
 import com.example.examplemod.Module.COMBAT.TriggerBot;
+import com.example.examplemod.Module.EXPLOIT.FakeCreative;
 import com.example.examplemod.Module.MOVEMENT.Fly;
 import com.example.examplemod.Module.MOVEMENT.Sprint;
 import com.example.examplemod.Module.Module;
 import com.example.examplemod.Module.PLAYER.BlockReach;
 import com.example.examplemod.Module.RENDER.GlowESP;
+import com.example.examplemod.Module.RENDER.Tracers;
 import font.FontUtils;
 import me.bushroot.clickgui.ClickGuiScreen;
 import net.minecraft.client.gui.GuiScreen;
@@ -35,6 +37,12 @@ public class Client {
         modules.add(new Sprint());
 
         modules.add(new Fly());
+
+        modules.add(new FakeCreative());
+
+        modules.add(new Tracers());
+
+
 
         clickGui = new ClickGuiScreen();
 
