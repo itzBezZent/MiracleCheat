@@ -24,16 +24,23 @@ public class ui {
                 FontRenderer fr = mc.fontRenderer;
                 ScaledResolution sr = new ScaledResolution(mc);
 
-                drawRect(5,5,200,14, new Color(0x151515).hashCode());
-                drawRect(5,5,200,4, rainbow(300));
+
+                String text = Client.cName + "§f | " + mc.getSession().getUsername() + " | " + Objects.requireNonNull(mc.getCurrentServerData()).serverIP +
+                        " | FPS: §a" + Minecraft.getDebugFPS() + "§f | Ping: §a" + mc.getCurrentServerData().pingToServer;
 
                 try {
-                    FontUtils.normal.drawString(Client.cName + "§f | " + mc.getSession().getUsername() + " | " + Objects.requireNonNull(mc.getCurrentServerData()).serverIP +
-                                    " | FPS: §a" + Minecraft.getDebugFPS() + "§f | Ping: §a" + mc.getCurrentServerData().pingToServer,
-                            10, 10, -1);
+                    drawRect(5, 5, FontUtils.normal.getStringWidth(text) > 190 ? (int) (FontUtils.normal.getStringWidth(text) + 14) : 200, 14, new Color(0x151515).hashCode());
+                    drawRect(5, 5, FontUtils.normal.getStringWidth(text) > 190 ? (int) (FontUtils.normal.getStringWidth(text) + 14) : 200, 4, rainbow(300));
+
+                    FontUtils.normal.drawString(text, 10, 10, -1);
                 } catch (Exception ex) {
-                    FontUtils.normal.drawString(Client.cName + "§f | " + mc.getSession().getUsername() + " | FPS: §a" + Minecraft.getDebugFPS(), 10, 10, -1);
+                    drawRect(5, 5, 200, 14, new Color(0x151515).hashCode());
+                    drawRect(5, 5, 200, 4, rainbow(300));
+
+                    FontUtils.normal.drawString(Client.cName + "§f | " + mc.getSession().getUsername() +
+                            " | FPS: §a" + Minecraft.getDebugFPS(), 10, 10, -1);
                 }
+
 
                 /*
                 fr.drawString("Miracle§aClient §fB§a0.0.1", 5, 5, -1);
