@@ -72,7 +72,7 @@ public class FontUtils {
 
             Map<String, Font> locationMap = new HashMap<>();
 
-            normal_ = getFont(locationMap, "font.ootf", 19);
+            normal_ = getFont(locationMap, "font.otf", 10);
 
             completed++;
 

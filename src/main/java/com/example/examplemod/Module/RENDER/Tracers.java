@@ -15,7 +15,7 @@ public class Tracers extends Module {
     @SubscribeEvent
     public void onRender(RenderWorldLastEvent e) {
         for (Entity playerEntity : mc.world.playerEntities) {
-            if (playerEntity != null) {
+            if (playerEntity != null && playerEntity != mc.player) {
                 RenderUtils.trace(mc, playerEntity, mc.getRenderPartialTicks(), 1);
             }
         }

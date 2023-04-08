@@ -1,5 +1,6 @@
 package com.example.examplemod.Menu;
 
+import com.example.examplemod.Menu.Tools.changeUser;
 import net.minecraft.client.gui.*;
 
 import net.minecraft.client.renderer.GlStateManager;
@@ -42,7 +43,7 @@ public class MiracleMenu extends GuiScreen {
 
         this.buttonList.add(new GuiButton(2, this.width / 2 + 2, i + 72 - 12, 98,
 
-                20, "Tools"));
+                20, "Change User"));
 
         this.buttonList.add(new GuiButton(3, this.width / 2 - 100, i + 72 - 12, 98,
 
@@ -69,6 +70,10 @@ public class MiracleMenu extends GuiScreen {
         } if (button.id == 1) {
 
             mc.shutdown();
+
+        } if (button.id == 2) {
+
+            mc.displayGuiScreen(new changeUser());
 
         } if (button.id == 3) {
 

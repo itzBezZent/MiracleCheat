@@ -9,6 +9,7 @@ import com.example.examplemod.Module.RENDER.GlowESP;
 import com.example.examplemod.Module.RENDER.Tracers;
 import font.FontUtils;
 import me.bushroot.clickgui.ClickGuiScreen;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import org.lwjgl.opengl.Display;
 import sun.font.FontUtilities;
@@ -17,9 +18,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Client {
 
-    public static String name = "MiracleClient 1.12.2";
+    public static String name = "MiracleClient 1.12.2 | User: " + Minecraft.getMinecraft().getSession().getUsername();
 
-    public static String cName = "Miracle§aClient §fB§aA0.0.2";
+    public static String cName = "Miracle§aClient §fA§a0.0.2";
 
     public static CopyOnWriteArrayList<Module> modules = new CopyOnWriteArrayList<Module>();
     public static ClickGuiScreen clickGui;
