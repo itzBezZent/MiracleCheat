@@ -19,7 +19,7 @@ public class RenderUtils {
             GL11.glDisable(GL11.GL_TEXTURE_2D);
             GL11.glBegin(GL11.GL_LINES);
             RenderManager r = mc.getRenderManager();
-            Vec3d v = new Vec3d(0.0D, 0.0D, 1.0D).rotatePitch(-((float) Math.toRadians((double) mc.player.rotationPitch))).rotatePitch(-((float) Math.toRadians((double) mc.player.rotationYaw)));
+            Vec3d v = new Vec3d(0.0D, 0.0D, 1.0D).rotatePitch(-((float) Math.toRadians((double) mc.player.rotationPitch))).rotateYaw(-((float) Math.toRadians((double) mc.player.rotationYaw)));
             GL11.glVertex3d(v.x, mc.player.getEyeHeight() + v.y, v.z);
             double x = e.lastTickPosX + (e.posX - e.lastTickPosX) * partialTicks;
             double y = e.lastTickPosY + (e.posY - e.lastTickPosY) * partialTicks;

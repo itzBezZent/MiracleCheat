@@ -116,7 +116,7 @@ public class MiracleMenu extends GuiScreen {
 
         drawLogo.drawString(5, "MiracleClient", this.width / 10 - this.fontRenderer.getStringWidth("TutorialClient") / 2,
 
-                this.height / 20, new Color(0x0373CC).getRGB());
+                this.height / 20, new Color(0x03CC5A).getRGB());
 
         for (GuiButton guiButton : this.buttonList) {
 

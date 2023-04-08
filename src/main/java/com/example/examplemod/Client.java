@@ -19,7 +19,7 @@ public class Client {
 
     public static String name = "MiracleClient 1.12.2";
 
-    public static String cName = "Miracle§aClient §fB§a0.0.2";
+    public static String cName = "Miracle§aClient §fB§aA0.0.2";
 
     public static CopyOnWriteArrayList<Module> modules = new CopyOnWriteArrayList<Module>();
     public static ClickGuiScreen clickGui;
