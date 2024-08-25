@@ -119,7 +119,7 @@ public class MiracleMenu extends GuiScreen {
 
         Gui.drawScaledCustomSizeModalRect(0, 0, 0, 0, this.width, this.height, this.width, this.height, this.width, this.height);
 
-        drawLogo.drawString(5, "MiracleClient", this.width / 10 - this.fontRenderer.getStringWidth("TutorialClient") / 2,
+        drawLogo.drawString(5, "MiracleClient", this.width / 10 - this.fontRenderer.getStringWidth("MiracleClient") / 2,
 
                 this.height / 20, new Color(0x03CC5A).getRGB());
 

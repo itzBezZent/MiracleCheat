@@ -19,9 +19,9 @@ To use Miracle Client, you will need to install 1.12.2 version of the Minecraft.
 
 ## Author
 
-itzBezZent and itznx2k8
+itzBezZent
 
-My discord: itzBezZent#4400
+My discord: nafanygod
 
 ## License
 
